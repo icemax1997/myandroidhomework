@@ -1,11 +1,11 @@
 package com.example.v04;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -17,6 +17,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     private ViewPager pager;
     private PagerTabStrip tab;
     private List<String> titleList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         showViewPager();
+
     }
 
     @Override
@@ -88,17 +92,27 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            Intent intent=new Intent(MainActivity.this,personal.class);
+            startActivity(intent);
+            return true;
         } else if (id == R.id.nav_gallery) {
-
+            Toast.makeText(MainActivity.this,"因网络原因，打开网站稍慢!",Toast.LENGTH_LONG).show();
+            Intent intent=new Intent(MainActivity.this,github.class);
+            startActivity(intent);
+            return true;
         } else if (id == R.id.nav_slideshow) {
-
+            Intent intent=new Intent(MainActivity.this,alarm.class);
+            startActivity(intent);
+            return true;
         } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
+            Intent intent=new Intent(MainActivity.this,course.class);
+            startActivity(intent);
+            return true;
         } else if (id == R.id.nav_send) {
-
+            Intent intent=new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:15858298995"));
+            startActivity(intent);
+            return true;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -120,12 +134,15 @@ public class MainActivity extends AppCompatActivity
                     return true;
                 case R.id.title_personal:
                     pager.setVisibility(View.GONE);
+                    Intent intent=new Intent(MainActivity.this,MainActivity2.class);
+                    startActivity(intent);
                     return true;
             }
             return false;
         }
 
     };
+
 
     private void showViewPager() {
 
@@ -139,7 +156,7 @@ public class MainActivity extends AppCompatActivity
             titleList=new ArrayList<String>();
             titleList.add("校园动态");
             titleList.add("班级动态");
-            titleList.add("其他动态");
+            titleList.add("科技动态");
 
             tab= (PagerTabStrip) findViewById(R.id.tab);
             tab.setBackgroundColor(Color.WHITE);

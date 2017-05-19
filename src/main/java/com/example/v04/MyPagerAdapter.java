@@ -14,10 +14,9 @@ public class MyPagerAdapter extends PagerAdapter {
     private List<View> viewList;
     private List<String> titleList;
 
-    public MyPagerAdapter(List<View> viewList, List<String> titleList)
-    {
-        this.viewList=viewList;
-        this.titleList=titleList;
+    public MyPagerAdapter(List<View> viewList, List<String> titleList) {
+        this.viewList = viewList;
+        this.titleList = titleList;
 
     }
 
@@ -28,7 +27,7 @@ public class MyPagerAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view==object;
+        return view == object;
     }
 
     @Override

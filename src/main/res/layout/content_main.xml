@@ -7,11 +7,14 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.v04.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    android:id="@+id/content_main">
 
 
-    <FrameLayout android:id="@+id/content" android:layout_width="match_parent"
-        android:layout_height="0dp" android:layout_weight="1">
+    <FrameLayout android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/pager"
@@ -23,8 +26,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"/>
-        </android.support.v4.view.ViewPager>
 
+        </android.support.v4.view.ViewPager>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="222"/>
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView android:id="@+id/navigation"

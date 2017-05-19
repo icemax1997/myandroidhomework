@@ -12,5 +12,11 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_login">login</string>
+    <string name="title_activity_personal">personal</string>
+    <string name="title_activity_github">github</string>
+    <string name="title_activity_alarm">alarm</string>
+    <string name="title_activity_course">course</string>
+    <string name="title_activity_schedule">schedule</string>
+    <string name="title_activity_cousr">cousr</string>
 
 </resources>
