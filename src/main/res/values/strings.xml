@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">v0.4</string>
+    <string name="app_name">信工助手</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -18,5 +18,18 @@
     <string name="title_activity_course">course</string>
     <string name="title_activity_schedule">schedule</string>
     <string name="title_activity_cousr">cousr</string>
-
+    <string name="title_activity_cal">cal</string>
+<string-array name="grade">
+    <item>大一</item>
+    <item>大二</item>
+    <item>大三</item>
+    <item>大四</item>
+    <item>研究生</item>
+</string-array>
+    <string-array name="major">
+        <item>计算机科学与技术</item>
+        <item>软件工程</item>
+        <item>网络工程</item>
+        <item>物联网</item>
+    </string-array>
 </resources>
