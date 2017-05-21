@@ -47,18 +47,19 @@ public class MainActivity extends AppCompatActivity
     /*
         *变量定义
         */
+    private View test;
     private List<View> viewList;
     private ViewPager pager;
     private PagerTabStrip tab;
     private List<String> titleList;
-    private LinearLayout fun, setting, news;
+    private LinearLayout fun, setting, news, news1, news2, news3, news4, news5, news6;
     private ImageView gif;
     private Button contact;
     List data1 = new ArrayList();
     int[] heads = new int[]{R.drawable.qq, R.drawable.qq1, R.drawable.qq2, R.drawable.qq, R.drawable.qq1, R.drawable.qq2};
     String[] citis = new String[]{"讲座：大学生创业如何打动投资人",
             "第三届彩虹酷跑活动热力开跑",
-            "杭电“E路同行”优秀大学生宣讲团",
+            "杭电E路同行优秀大学生宣讲团",
             "校企合作建慕课 翻转课堂促改革",
             "计算机系举行16级专业分流介绍会",
             "14级学生就业实习动员大会"};
@@ -91,7 +92,20 @@ public class MainActivity extends AppCompatActivity
         fun = (LinearLayout) findViewById(R.id.fun);
         setting = (LinearLayout) findViewById(R.id.setting);
         news = (LinearLayout) findViewById(R.id.view1);
+//        news1 = (LinearLayout) findViewById(R.id.news1);
+//        news2 = (LinearLayout) findViewById(R.id.news2);
+//        news3 = (LinearLayout) findViewById(R.id.news3);
+//        news4 = (LinearLayout) findViewById(R.id.news4);
+//        news5 = (LinearLayout) findViewById(R.id.news5);
+//        news6 = (LinearLayout) findViewById(R.id.news6);
+        test=(View)findViewById(R.id.news1);
         gif = (ImageView) findViewById(R.id.gif);
+//        news1.setVisibility(View.GONE);
+//        news2.setVisibility(View.GONE);
+//        news3.setVisibility(View.GONE);
+//        news4.setVisibility(View.GONE);
+//        news5.setVisibility(View.GONE);
+//        news6.setVisibility(View.GONE);
         fun.setVisibility(View.GONE);
         setting.setVisibility(View.GONE);
         //数据
@@ -197,15 +211,15 @@ public class MainActivity extends AppCompatActivity
                     gif.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            TranslateAnimation animation = new TranslateAnimation(0, -20, 0, -20);
-                            animation.setInterpolator(new OvershootInterpolator());
-                            animation.setDuration(300);
-                            animation.setRepeatCount(4);
-                            animation.setRepeatMode(Animation.REVERSE);
-                            fun.startAnimation(animation);
+//                            TranslateAnimation animation = new TranslateAnimation(0, -30, 0, -30);
+//                            animation.setInterpolator(new OvershootInterpolator());
+//                            animation.setDuration(300);
+//                            animation.setRepeatCount(6);
+//                            animation.setRepeatMode(Animation.REVERSE);
+//                            fun.startAnimation(animation);
                             final ProgressDialog progressDialog = new ProgressDialog(MainActivity.this);
                             progressDialog.setTitle("正在强力拆开...");
-                            progressDialog.setMessage("我倒要看看你的运气");
+                            progressDialog.setMessage("幸运值计算中");
                             progressDialog.setCancelable(false);
                             progressDialog.show();
                             new Handler().postDelayed(new Runnable() {
@@ -257,7 +271,7 @@ public class MainActivity extends AppCompatActivity
         switch (item) {
             case 1:
                 dialog.setTitle("恭喜你！");//标题
-                dialog.setMessage("抽中一道计算题");//文本内容
+                dialog.setMessage("抽中一道计算题\n（智力题擦肩而过）");//文本内容
                 dialog.setPositiveButton("小菜一碟", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -275,7 +289,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case 2:
                 dialog.setTitle("恭喜你！");//标题
-                dialog.setMessage("抽中一道智力题");//文本内容
+                dialog.setMessage("抽中一道智力题\n（计算题擦肩而过）");//文本内容
                 dialog.setPositiveButton("小菜一碟", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -285,7 +299,8 @@ public class MainActivity extends AppCompatActivity
                 dialog.setNegativeButton("溜了溜了", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(MainActivity.this, "胆小鬼", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(MainActivity.this, "胆小鬼", Toast.LENGTH_SHORT).show();
                     }
                 });
                 dialog.show();

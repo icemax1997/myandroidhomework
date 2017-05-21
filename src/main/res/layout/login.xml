@@ -38,9 +38,9 @@
             android:layout_gravity="center"
             android:ems="20"
             android:hint="账号"
-            android:textSize="26dp"
+            android:textSize="20dp"
             android:textColorHint="#E6E8EB"
-            android:textStyle="bold"
+
             android:inputType="textPersonName" />
 
         <EditText
@@ -51,8 +51,8 @@
             android:ems="20"
             android:hint="密码"
             android:textColorHint="#E6E8EB"
-            android:textSize="26dp"
-            android:textStyle="bold"
+            android:textSize="20dp"
+
             android:inputType="textPassword" />
 
         <Button
@@ -71,6 +71,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="账号密码均为admin"
+        android:gravity="center"
     />
     </LinearLayout>
 

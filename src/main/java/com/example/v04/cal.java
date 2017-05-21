@@ -30,6 +30,7 @@ public class cal extends AppCompatActivity {
         reinit = (Button) findViewById(R.id.reinit);
         sum = (Button) findViewById(R.id.sum);
         result= (EditText) findViewById(R.id.result);
+        sum.setVisibility(View.INVISIBLE);
         bt1 = (TextView) findViewById(R.id.bt1);
         bt2 = (TextView) findViewById(R.id.bt2);
         bt3 = (TextView) findViewById(R.id.bt3);
@@ -69,9 +70,16 @@ public class cal extends AppCompatActivity {
 
             }
         });
+        result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sum.setVisibility(View.VISIBLE);
+            }
+        });
         sum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 int x = Integer.parseInt(result.getText().toString());
                 int sum=0;
                 for (int i = 0; i < 9; i++) {
@@ -81,12 +89,12 @@ public class cal extends AppCompatActivity {
                     //获取LayoutInflater对象，该对象可以将布局文件转换成与之一致的view对象
                     LayoutInflater inflater=getLayoutInflater();
                     //将布局文件转换成相应的View对象
-                    View layout=inflater.inflate(R.layout.bingo,(ViewGroup)findViewById(R.id.toast_layout_root));
+                    View layout=inflater.inflate(R.layout.bingo,(ViewGroup)findViewById(R.id.toast_layout_root_bingo));
                     //从layout中按照id查找imageView对象
                     ImageView imageView=(ImageView)layout.findViewById(R.id.bingo);
                     //实例化一个Toast对象
                     Toast toast=new Toast(getApplicationContext());
-                    toast.setDuration(Toast.LENGTH_LONG);
+                    toast.setDuration(Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
                     toast.setView(layout);
                     toast.show();
@@ -98,6 +106,19 @@ public class cal extends AppCompatActivity {
                         }
                     }, 2000);
 
+                }else{
+                    //获取LayoutInflater对象，该对象可以将布局文件转换成与之一致的view对象
+                    LayoutInflater inflater=getLayoutInflater();
+                    //将布局文件转换成相应的View对象
+                    View layout=inflater.inflate(R.layout.wrong,(ViewGroup)findViewById(R.id.toast_layout_root_wrong));
+                    //从layout中按照id查找imageView对象
+                    ImageView imageView=(ImageView)layout.findViewById(R.id.wrong);
+                    //实例化一个Toast对象
+                    Toast toast=new Toast(getApplicationContext());
+                    toast.setDuration(Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                    toast.setView(layout);
+                    toast.show();
                 }
 
             }

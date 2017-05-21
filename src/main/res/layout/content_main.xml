@@ -9,7 +9,24 @@
     tools:context="com.example.v04.MainActivity"
     tools:showIn="@layout/app_bar_main"
     android:id="@+id/content_main">
-
+    <!--<include layout="@layout/news1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="450dp"></include>-->
+    <!--<include layout="@layout/news2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="450dp"></include>-->
+    <!--<include layout="@layout/news3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="450dp"></include>-->
+    <!--<include layout="@layout/news4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="450dp"></include>-->
+    <!--<include layout="@layout/news5"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="450dp"></include>-->
+    <!--<include layout="@layout/news6"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="450dp"></include>-->
     <include layout="@layout/news"
         android:layout_width="match_parent"
         android:layout_height="500dp" />

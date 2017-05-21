@@ -8,13 +8,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="10dp"
+    android:src="@drawable/bingotime"
+    />
         <ImageView
             android:id="@+id/gif"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/gif" />
 
     </LinearLayout>

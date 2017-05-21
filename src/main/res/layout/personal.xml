@@ -6,20 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
+    android:background="@drawable/login"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.v04.personal">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_weight="3"
-        android:background="#CDCD9B">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:src="@drawable/personalbg" />
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,14 +26,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="110dp"
                     android:layout_height="110dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="70dp"
                     android:src="@mipmap/ic_launcher_round" />
 
                 <TextView
@@ -59,12 +54,18 @@
 
         </LinearLayout>
     </FrameLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="7"
-            android:background="#E6E8EB"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/new_item"
+            android:elevation="2dip"
+            >
 
             <TextView
                 android:layout_width="match_parent"
@@ -73,8 +74,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="5dp"
                 android:text="个人信息"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,7 +84,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:orientation="vertical"
-                android:background="@drawable/shape_radius">
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -92,20 +94,14 @@
                     android:layout_marginBottom="5dp"
                     >
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="12dp"
-                        android:background="@drawable/ic_menu_share" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
                         android:text="姓名：张三"
-                        android:textSize="16dp" />
+                        android:textSize="14dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -115,20 +111,14 @@
                     android:layout_marginBottom="5dp"
                     >
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="12dp"
-                        android:background="@drawable/ic_menu_share" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
                         android:text="性别：男"
-                        android:textSize="16dp" />
+                        android:textSize="14dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -138,20 +128,14 @@
                     android:layout_marginBottom="5dp"
                     >
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="12dp"
-                        android:background="@drawable/ic_menu_share" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
                         android:text="专业：计算机系"
-                        android:textSize="16dp" />
+                        android:textSize="14dp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -161,20 +145,14 @@
                     android:layout_marginBottom="5dp"
                     >
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="12dp"
-                        android:background="@drawable/ic_menu_share" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
                         android:text="年级：大一"
-                        android:textSize="16dp" />
+                        android:textSize="14dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -185,15 +163,15 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="5dp"
                 android:text="最近动态"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:orientation="vertical"
-                android:background="@drawable/shape_radius">
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -203,13 +181,7 @@
                     android:layout_marginBottom="5dp"
                     >
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="12dp"
-                        android:background="@drawable/ic_menu_share" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -217,7 +189,7 @@
                         android:gravity="center_vertical"
                         android:layout_marginRight="5dp"
                         android:text="成功躲过宿管阿姨的追查，成功逃课，成功通过英语六级，获得同学之间的信任，并与他们成立了作业交流小组，与每周微积分上交作业的前一天频繁活动"
-                        android:textSize="16dp" />
+                        android:textSize="14dp" />
                 </LinearLayout>
             </LinearLayout>
             <TextView
@@ -227,42 +199,42 @@
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="8dp"
                 android:text="所获荣誉"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:orientation="vertical"
-                android:background="@drawable/shape_radius">
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     >
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="12dp"
-                        android:background="@drawable/ic_menu_share" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center_vertical"
-                        android:text="宿舍第一晚睡王"
-                        android:textSize="16dp" />
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="√宿舍第一晚睡王"
+                        android:textSize="14dp" />
+
+
                 </LinearLayout>
 
             </LinearLayout>
         </LinearLayout>
+
+
 
 
 </LinearLayout>
